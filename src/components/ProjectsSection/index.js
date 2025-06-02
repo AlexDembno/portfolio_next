@@ -10,13 +10,11 @@ export const projects = [
       "Role Separation: API logic is split between parent and child flows, with separate endpoints and access validation.",
       "PostgreSQL Integration: Designed and connected relational database models for users, children, task lists, and calendar data.",
       "Secure API Design: Created RESTful API routes for authentication, task management, and user-child associations with token verification middleware.",
-      "Dev Tools: Used `dotenv` for environment variables, `cors` for cross-origin requests, and `morgan` for logging.",
     ],
     frontend: [
-      "Landing Page with Video Background: Created a responsive landing screen with animated background video and multilingual support (EN/DE/UA/RU).",
+      "Custom UI Components: Built reusable components like calendar task lists, kid selector, and animated feedback blocks.",
       "Separate Dashboards: Built individual views for parents (task creation, control) and children (task list, status updates).",
       "Protected Routes: Integrated access control using React Router for private/public login zones.",
-      "Custom UI Components: Built reusable components like calendar task lists, kid selector, and animated feedback blocks.",
     ],
     technologies: [
       "JavaScript",
@@ -47,7 +45,6 @@ export const projects = [
     backend: [
       "Order Management System: Developed a custom order management system with full CRUD operations, status-based filtering, data editing, and the ability to send updates to clients.",
       "Role-Based Access Control: Implemented user role handling (admin, manager) with access restrictions and UI adjustments based on the assigned role.",
-      "File Upload & Storage: Enabled file uploads from the client side, integrated with Google Drive API for cloud storage, and handled file ID management and error cases.",
       "Dynamic Vehicle Filter API: Created PHP endpoints to serve dynamic filter data (make, model, engine, etc.), with support for caching and dependent dropdowns.",
       "Custom Service Data: Built a system for selecting, saving, and displaying tuning services using JSON-formatted data to support multi-selection and flexible rendering.",
     ],
@@ -56,7 +53,6 @@ export const projects = [
       "Dependent Select Logic: Implemented a chain of dynamic select inputs (Make → Model → Fuel → Engine) with real-time data loading and automatic reset of dependent fields.",
       "Animated Performance Metrics: Created animated visual indicators for BHP and Torque gains, dynamically updated based on user input or tuning selection.",
       "Form Validation & Result Display: Added client-side validation, custom error notifications, and a responsive results block showing tuning outcomes.",
-      "Admin Dashboard Interface: Added custom checkboxes for editing selected services in orders and implemented a file upload feature to attach ready-made tuning files to each order.",
     ],
     technologies: [
       "JavaScript",
@@ -155,13 +151,11 @@ export const projects = [
     backend: [
       "Contact Form Integration: Implemented a secure and user-friendly contact form, enabling clients to submit inquiries directly through the website. Configured server-side validation and email notifications using Nodemailer.",
       "Email Notifications: Set up automated email responses to confirm receipt of client inquiries, improving user communication and engagement.",
-      "Server Optimization: Built a lightweight and efficient server using Node.js and Express, ensuring quick response times and seamless navigation for users.",
     ],
     frontend: [
       "Responsive Design: Crafted a responsive layout using HTML and SASS, ensuring an optimal viewing experience across devices, including desktops, tablets, and smartphones.",
       "Interactive Elements: Enhanced user experience with dynamic JavaScript features, such as real-time form validation and smooth scrolling to sections.",
       "Styling: Designed a clean and professional user interface tailored to the needs of a legal firm, emphasizing accessibility and readability.",
-      "Performance Optimization: Minimized CSS and JS for faster load times, contributing to an improved user experience.",
     ],
     technologies: [
       "HTML",
@@ -188,9 +182,7 @@ export const projects = [
 
     role: "Full-stack Developer",
     backend: [
-      "Node.js and Express: Created REST API for handling requests and managing data.",
       "Routes and Controllers: Implemented business logic for users, tasks, and notifications with modular structure.",
-      "MongoDB: Set up the database for data storage and management, including pet profiles and task tracking.",
       "Authentication: Integrated JWT-based authentication with secure password hashing and token verification.",
       "Data Validation: Used middleware to validate incoming data structures and ensure integrity.",
       "Swagger: Integrated API documentation for backend routes to assist developers during integration and testing.",
@@ -201,8 +193,6 @@ export const projects = [
       "Responsive Dashboard: Created a user dashboard for managing pet profiles, scheduled tasks, and notifications.",
       "UI/UX Design: Implemented a pet-friendly interface using Figma guidelines, ensuring accessibility and simplicity.",
       "Task Manager UI: Developed interactive task list with status updates, filter options, and due dates.",
-      "Sass Styling: Used nested SCSS for modular styling and component theming.",
-      "Webpack: Optimized the build pipeline to reduce load times and improve performance across devices.",
     ],
     technologies: [
       "HTML",
@@ -228,16 +218,16 @@ export const projects = [
   {
     title: "Filmoteka",
     description:
-      "Collaboratively developed a web application for browsing and managing a film library, using The Movie Database API. Users can search, view movie details, add films to their watched list, and mark favorites.",
+      "Feature-rich web app for exploring and managing a personal movie library. Users can search films, view detailed info, add movies to favorites or watched list, and enjoy a responsive UI powered by real-time data from The Movie Database (TMDb) API. Developed collaboratively using Parcel, SCSS, and modern frontend tools.",
 
     role: "Frontend Developer",
     frontend: [
-      "User Interfaces: Developed responsive and dynamic user interfaces with modular structure as part of a team effort.",
-      "Movie Catalog: Integrated The Movie Database (TMDb) API to fetch real-time movie data and dynamically display content.",
-      "Search & Filters: Implemented keyword search and category filtering to help users discover content.",
-      "Loading Indicator & Notifications: Created loading animation and user-friendly error/success notification system.",
-      "Favorites & Watched: Enabled users to save and retrieve a list of watched or favorite films using localStorage.",
-      "Sass Styling: Designed mobile-first layout using nested SCSS and adaptive breakpoints.",
+      "Modular UI: Built responsive, interactive movie library interface using SCSS with mobile-first and adaptive breakpoints.",
+      "TMDb API Integration: Connected to TMDb API to fetch and render real-time movie data including posters, ratings, trailers, and metadata.",
+      "Search & Pagination: Implemented keyword search, genre filtering, and pagination via TUI Pagination for seamless navigation.",
+      "Favorites & Watched Lists: Used `localStorage` to store user's personal movie lists and persist them across sessions.",
+      "Notifications & Modals: Integrated Notiflix for alert messages and BasicLightbox for modal previews of movie trailers or images.",
+      "Build & Tools: Used Parcel as a bundler, lodash.debounce for search input optimization, and VanillaTilt for subtle UI animation effects.",
     ],
     technologies: [
       "HTML",
@@ -254,59 +244,59 @@ export const projects = [
     liveLink: "https://orddreamer.github.io/filmoteka-first-command/",
     githubLink: "https://github.com/OrdDreamer/filmoteka-first-command",
   },
-  {
-    title: "Ice cream shop",
-    description:
-      "Designed and developed a visually appealing section for an ice cream shop website. Focus was on creative layout, engaging color palette, and enhancing user interaction through smooth modals and responsive design.",
+  // {
+  //   title: "Ice cream shop",
+  //   description:
+  //     "Designed and developed a visually appealing section for an ice cream shop website. Focus was on creative layout, engaging color palette, and enhancing user interaction through smooth modals and responsive design.",
 
-    role: "Frontend Developer",
-    frontend: [
-      "Unique Positioning: Developed a section with unique layout positioning using flex and absolute styles for modern feel.",
-      "Modal Window: Created a modal window component for product details and ordering interaction.",
-      "Adaptive Layout: Ensured that the section displayed consistently across various screen sizes using media queries.",
-      "Animation Effects: Added subtle transitions and hover effects to enhance user experience.",
-      "Interactive Elements: Developed simple JavaScript-based interactions to improve product engagement.",
-    ],
-    technologies: [
-      "HTML",
-      "Sass",
-      "JavaScript",
-      "GitHub",
-      "Figma",
-      "Trello",
-      "VSCode",
-      "ESLint",
-      "Prettier",
-    ],
-    liveLink: "https://orddreamer.github.io/ice-cream/",
-    githubLink: "https://github.com/OrdDreamer/ice-cream",
-  },
-  {
-    title: "WebStudio",
-    description:
-      "Developed a complete static website from scratch, simulating a modern business homepage. Implemented responsive design, optimized build with Parcel, and used SCSS and JavaScript to enhance interactivity and performance.",
-    role: "Frontend Developer",
-    frontend: [
-      "Static Website: Built the entire website using HTML and SCSS, with a focus on clean structure and BEM methodology.",
-      "Dynamic Features: Implemented image slider, mobile menu toggle, and smooth scrolling using vanilla JavaScript.",
-      "Build Optimization: Used Parcel for bundling assets, enabling hot reloading and optimized production builds.",
-      "Accessibility: Ensured semantic markup and keyboard navigation support for improved user accessibility.",
-      "Responsive Grid: Used flexbox and media queries to create responsive service, portfolio, and team sections.",
-    ],
-    technologies: [
-      "HTML",
-      "Sass",
-      "JavaScript",
-      "GitHub",
-      "Figma",
-      "Trello",
-      "VSCode",
-      "ESLint",
-      "Prettier",
-    ],
-    liveLink: "https://alexdembno.github.io/goit-markup-hw-08/",
-    githubLink: "https://github.com/AlexDembno/goit-markup-hw-08",
-  },
+  //   role: "Frontend Developer",
+  //   frontend: [
+  //     "Unique Positioning: Developed a section with unique layout positioning using flex and absolute styles for modern feel.",
+  //     "Modal Window: Created a modal window component for product details and ordering interaction.",
+  //     "Adaptive Layout: Ensured that the section displayed consistently across various screen sizes using media queries.",
+  //     "Animation Effects: Added subtle transitions and hover effects to enhance user experience.",
+  //     "Interactive Elements: Developed simple JavaScript-based interactions to improve product engagement.",
+  //   ],
+  //   technologies: [
+  //     "HTML",
+  //     "Sass",
+  //     "JavaScript",
+  //     "GitHub",
+  //     "Figma",
+  //     "Trello",
+  //     "VSCode",
+  //     "ESLint",
+  //     "Prettier",
+  //   ],
+  //   liveLink: "https://orddreamer.github.io/ice-cream/",
+  //   githubLink: "https://github.com/OrdDreamer/ice-cream",
+  // },
+  // {
+  //   title: "WebStudio",
+  //   description:
+  //     "Developed a complete static website from scratch, simulating a modern business homepage. Implemented responsive design, optimized build with Parcel, and used SCSS and JavaScript to enhance interactivity and performance.",
+  //   role: "Frontend Developer",
+  //   frontend: [
+  //     "Static Website: Built the entire website using HTML and SCSS, with a focus on clean structure and BEM methodology.",
+  //     "Dynamic Features: Implemented image slider, mobile menu toggle, and smooth scrolling using vanilla JavaScript.",
+  //     "Build Optimization: Used Parcel for bundling assets, enabling hot reloading and optimized production builds.",
+  //     "Accessibility: Ensured semantic markup and keyboard navigation support for improved user accessibility.",
+  //     "Responsive Grid: Used flexbox and media queries to create responsive service, portfolio, and team sections.",
+  //   ],
+  //   technologies: [
+  //     "HTML",
+  //     "Sass",
+  //     "JavaScript",
+  //     "GitHub",
+  //     "Figma",
+  //     "Trello",
+  //     "VSCode",
+  //     "ESLint",
+  //     "Prettier",
+  //   ],
+  //   liveLink: "https://alexdembno.github.io/goit-markup-hw-08/",
+  //   githubLink: "https://github.com/AlexDembno/goit-markup-hw-08",
+  // },
 ];
 
 export default projects;
