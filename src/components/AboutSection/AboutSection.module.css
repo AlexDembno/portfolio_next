@@ -1,0 +1,89 @@
+.container {
+  max-width: 767px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 1023px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+.about {
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .about {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about {
+    max-width: 1024px;
+  }
+}
+
+.aboutTools {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.marqueeContainer {
+  overflow: hidden;
+  width: 100%;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px 0;
+  position: relative;
+}
+
+.marquee {
+  display: flex;
+  width: fit-content;
+  animation: scroll 50s linear infinite;
+}
+
+.marqueeContainer:hover .marquee {
+  animation-play-state: paused;
+}
+
+.techList {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.techItem {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Анимация */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

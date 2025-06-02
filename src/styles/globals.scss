@@ -1,0 +1,96 @@
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  overflow-x: hidden; /* Отключает горизонтальный скролл */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+//   }
+// }
+
+@keyframes gradientWave {
+  0% {
+    background-size: 50% 50%;
+    background-position: 0% 50%;
+  }
+  25% {
+    background-size: 70% 70%;
+    background-position: 25% 50%;
+  }
+  50% {
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+  }
+  75% {
+    background-size: 70% 70%;
+    background-position: 75% 50%;
+  }
+  100% {
+    background-size: 50% 50%;
+    background-position: 100% 50%;
+  }
+}
+
+.container {
+  max-width: 767px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 1023px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1000px;
+  }
+}
