@@ -47,7 +47,7 @@ export default function Form() {
 
       if (!res.ok) throw new Error("Failed to send");
 
-      setMessage("Message sent. We'll contact you soon.");
+      setMessage("Message sent. I'll contact you soon.");
       formRef.current.reset();
     } catch (error) {
       console.error(error);
@@ -92,7 +92,6 @@ export default function Form() {
           <input
             placeholder="Telefon"
             type="tel"
-            required
             name="telefon"
             className={styles.inputTelefon}
           />
