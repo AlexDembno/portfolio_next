@@ -20,9 +20,11 @@ export default function RootLayout({ children }) {
         <Analytics />
         <div>
           <Header />
-          <AboutSection />
-          <main className="main">{children}</main>
-          <Form />
+          <main className="main">
+            <AboutSection />
+            {children}
+            <Form />
+          </main>
           <Footer />
         </div>
       </body>

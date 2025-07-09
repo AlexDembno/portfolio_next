@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { projects } from "./index.js";
 import {
@@ -78,16 +79,21 @@ export default function ProjectsSection() {
     ESLint: <SiEslint color="#4b32c3" />,
   };
 
+  const [expandedIndex, setExpandedIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleToggle = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
     <div className={styles.container}>
       <h2 className={styles.heading}>My Projects</h2>
       <Swiper
-        modules={[Navigation, Pagination, EffectCoverflow]}
+        modules={[Pagination, EffectCoverflow]}
         effect="coverflow"
-        autoHeight={true}
         centeredSlides={true}
         slidesPerView={2}
-        loop={true}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -96,7 +102,13 @@ export default function ProjectsSection() {
           slideShadows: false,
         }}
         pagination={{ clickable: true }}
-        navigation
+        onSlideChange={(swiper) => {
+          const newIndex = swiper.activeIndex;
+          if (newIndex !== activeIndex) {
+            setActiveIndex(newIndex);
+            setExpandedIndex(null);
+          }
+        }}
         breakpoints={{
           0: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
@@ -105,7 +117,11 @@ export default function ProjectsSection() {
       >
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
-            <div className={styles.projectsList}>
+            <div
+              className={`${styles.projectsList} ${
+                expandedIndex === index ? styles.more : ""
+              }`}
+            >
               <h3 className={styles.projectTitle}>
                 {project.liveLink ? (
                   <Link
@@ -119,32 +135,43 @@ export default function ProjectsSection() {
                   project.title
                 )}
               </h3>
+              <div className={styles.descriptionWrapper}>
+                <p className={styles.description}>{project.description}</p>
+                <p className={styles.role}>
+                  <strong>Role:</strong> {project.role}
+                </p>
 
-              <p className={styles.description}>{project.description}</p>
-              <p className={styles.role}>
-                <strong>Role:</strong> {project.role}
-              </p>
+                <h4>Frontend Features</h4>
+                <p className={styles.subheading}>{project.frontend}</p>
 
-              <h4>Frontend Features</h4>
-              <p className={styles.subheading}>{project.frontend}</p>
+                {project.backend && (
+                  <>
+                    <h4>Backend Development</h4>
+                    <p className={styles.subheading}>{project.backend}</p>
+                  </>
+                )}
+                {project.technologies?.length > 0 && (
+                  <>
+                    <p className={styles.techHeading}>
+                      <strong>Technologies & Tools:</strong>
+                    </p>
+                    <ul className={styles.techList}>
+                      {project.technologies.map((tech, i) => (
+                        <li key={i} className={styles.techItem} title={tech}>
+                          {techIcons[tech] || tech}
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+              </div>
 
-              {!project.backend || <h4>Backend Development</h4>}
-              <p className={styles.subheading}>{project.backend}</p>
-
-              {project.technologies?.length > 0 && (
-                <>
-                  <p className={styles.techHeading}>
-                    <strong>Technologies & Tools:</strong>
-                  </p>
-                  <ul className={styles.techList}>
-                    {project.technologies.map((tech, i) => (
-                      <li key={i} className={styles.techItem} title={tech}>
-                        {techIcons[tech] || tech}
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
+              <button
+                onClick={() => handleToggle(index)}
+                className={styles.button}
+              >
+                {expandedIndex === index ? "less" : "more"}
+              </button>
             </div>
           </SwiperSlide>
         ))}
