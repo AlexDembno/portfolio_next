@@ -62,12 +62,12 @@ export default function AboutSection() {
       </p>
 
       <p className={styles.about}>
-        I am a Full Stack Developer passionate about creating modern,
-        responsive, and high-performance web applications. With a strong
-        foundation in React, Next.js, and TypeScript, I focus on clean code,
-        UI/UX best practices, and performance optimization. I also build robust
-        backend services using Node.js and Express, and work with both SQL and
-        NoSQL databases.
+        I am a Full Stack Developer with a strong focus on building modern,
+        responsive, and high-performance web applications. Skilled in React,
+        Next.js, and TypeScript, I emphasize clean, maintainable code, UI/UX
+        best practices, and performance optimization. On the backend, I develop
+        robust and scalable services with Node.js and Express, and have
+        experience working with both SQL and NoSQL databases.
       </p>
 
       <h3 className={styles.aboutTools}>Tools & Tech Stack</h3>
