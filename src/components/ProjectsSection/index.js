@@ -1,5 +1,32 @@
 export const projects = [
   {
+    title: "Weather Forecast App",
+    description:
+      "Single-page application that provides real-time weather forecasts with animated backgrounds and icons. Users can search for cities worldwide, view detailed weather data, and enjoy a responsive, visually engaging design.",
+    role: "Frontend Developer",
+    backend: [
+      "OpenWeatherMap API Integration: Fetched current weather data and forecasts based on user input.",
+      "Debounced Search: Implemented optimized API requests with delayed input handling to reduce redundant calls.",
+    ],
+    frontend: [
+      "Dynamic Backgrounds: Displayed weather-dependent background videos (e.g., rain, clouds, clear sky).",
+      "Animated Weather Icons: Integrated interactive icons for clear visual representation of weather conditions.",
+      "Responsive Design: Built a fully responsive layout for desktop and mobile using Tailwind CSS.",
+      "LocalStorage Persistence: Stored the last searched city for automatic reload on app restart.",
+      "Loading Animation: Implemented visual feedback during API requests.",
+    ],
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "VSCode",
+      "Git",
+      "GitHub",
+    ],
+    liveLink: "https://weather-app-omega-weld-23.vercel.app/",
+  },
+  {
     title: "KidsCalendar",
     description:
       "Web application for organizing daily tasks between parents and children, with personal dashboards, progress tracking, calendar-based planning, and educational motivation mechanics.",
