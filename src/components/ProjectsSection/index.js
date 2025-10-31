@@ -62,7 +62,7 @@ export const projects = [
       "ESLint",
       "Prettier",
     ],
-    liveLink: "https://kids-calendar.vercel.app/",
+    liveLink: "https://kids-calendar-new-app.vercel.app/",
   },
   {
     title: "CHIP TUNING",
